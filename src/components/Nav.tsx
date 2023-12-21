@@ -5,7 +5,8 @@ import icon from "@/../public/icon.svg";
 import Link from "next/link";
 export default function Nav() {
   return (
-    <div >
+    <div className="border">
+    <div className="container">
       <div className="nav">
       <div>
         <Image src={icon} alt="mennrtel" />
@@ -28,6 +29,7 @@ export default function Nav() {
         <button>Get Started</button>
       </div>
       </div>
+    </div>
     </div>
   );
 }

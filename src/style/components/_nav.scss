@@ -1,42 +1,49 @@
-.nav{
+@use "../abstracts" as ab;
+.border{
+  border-bottom: solid 0.2em rgb(4, 117, 214);
+}
+.nav {
+  display: flex;
+// width: 1em;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 0em;
+  
+  .nav_menu {
     display: flex;
-   
     justify-content: space-between;
     align-items: center;
-    padding: 2em 3em;
-    border-bottom: solid 0.2em rgb(4, 117, 214);
-    .nav_menu{
-        display:flex ;
-        justify-content: space-between;
-        align-items: center;
-        // outline: solid red 2px;
-        gap:6em;
-        ul{
-            display: flex;
-            gap:6em;
-        }
-        li{
-            list-style: none;
-            display: flex;
-            a{
-                text-decoration: none;
-                color: black;
-                font-size: 1.125rem;
-                font-weight: 700;
-            }
-        }
-        button{
-            background-color: white;
-            border: 0.1em solid #0475D6;
-            border-radius: 0.2em;
-            font-size: 1.25rem;
-            font-weight: 700;
-            width: 12.05788rem;
-height: 3.64963rem;
-        }
-        button:hover{
-            background-color: #0475D6;
-            color: white;
-        }
+    // outline: solid red 2px;
+    gap: 6em;
+    ul {
+      display: flex;
+      gap: 4em;
+// align-items: flex-end;
     }
+    li {
+      list-style: none;
+      display: flex;
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.125rem;
+        font-weight: 700;
+
+      }
+    }
+    button {
+      background-color: white;
+      border: 0.1em solid #0475d6;
+      border-radius: 0.2em;
+      font-size: 1.25rem;
+      font-weight: 700;
+      width: 12.05788rem;
+      height: 3.64963rem;
+    }
+    button:hover {
+      background-color: #0475d6;
+      color: white;
+      cursor: pointer;
+    }
+  }
 }

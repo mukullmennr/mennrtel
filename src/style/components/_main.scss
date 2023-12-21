@@ -1,8 +1,11 @@
 @use "../abstracts/" as ab;
+.border_main{
+    border-bottom: 0.1em solid #0475D6;
+  }
 .main{
     display: flex;
-    justify-content: space-evenly;
-    border-bottom: 0.1em solid #0475D6;
+    justify-content: space-between;
+    
     align-items:center;
     padding: 5em 0em;
     .main_heading{
@@ -31,8 +34,7 @@
 
 .main_img{
 
-    width: min(90%, 100rem);
-    margin-inline: auto;
+   
     margin-top: -5.8em;
 
     display: flex;
