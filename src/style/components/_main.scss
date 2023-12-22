@@ -7,19 +7,35 @@
     justify-content: space-between;
     align-items:center;
     padding: 3em 0em 7em 0em;
+    @include ab.screen-74{
+        padding: 2.5em 0em 6.5em 0em;
+    }
+    @include ab.screen-69{
+        padding: 2em 0em 6em 0em;
+    }
+    @include ab.screen-64{
+        padding: 1.8em 0em 5.5em 0em;
+    }
     .main_heading{
         width: 50em;
         // outline: 2px solid red;
         padding: 2em 0em;
         margin-top: -2.5em;
+        
     }
     div>h1{
         font-weight: 500;
         font-size: 4.375rem;
+        @include ab.screen-79{
+            font-size: clamp(0.5rem, 4vw, 4.375rem);
+        }
     }
     div>p{
         font-weight: 400rem;
         font-size: 1.75rem;
+        @include ab.screen-79{
+            font-size: clamp(0.5rem, 2vw, 1.75rem);
+        }
     }
    div>h1>span{
     color: #0475D6;
@@ -30,31 +46,55 @@
     padding: 0.1em;
    }
 }
+.main_container{
+    width: min(90%, 85rem);
+    margin-inline:auto;
+    position: relative;
+}
+// .main_img{
+//     margin-top: -5.8em;
+//     display: flex;
+//     gap: 3em;
 
-.main_img{
-
+//     > div, p {
+//         flex: 1;
+//         display:flex ;
+//         align-items: center;
+//         font-size: 1.75rem;
+//         font-weight: 400;
+//         @include ab.screen-79{
+//             font-size: clamp(0.5rem, 2vw, 1.75rem);
+//         }
+//     }
+//     > div {
+//         background-color: white;
+//         border: 0.1em solid #0475D6;
+//         border-radius: 0.3em;
+//         padding-block: 0.6em;
+//         img {
+//             // outline: 2px solid red;
+//             margin-inline: auto;
+//             @include ab.screen-74{
+//                 width: 50%;
+//             }
+//         }
+//     }
+// }
+// .line{
+//     position: absolute;
+//     bottom: 0;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     width: 100%;
+//     height: 0.1em;
+//     background-color: #0475D6;
    
-    margin-top: -5.8em;
+// }
 
-    display: flex;
-    gap: 3em;
+.main-image {
+    outline: 2px solid red;
 
-    > div, p {
-        flex: 1;
-        display:flex ;
-        align-items: center;
-        font-size: 1.75rem;
-        font-weight: 400;
-    }
-
-    > div {
-        background-color: white;
-        border: 0.1em solid #0475D6;
-        border-radius: 0.3em;
-        padding-block: 0.6em;
-        img {
-            // outline: 2px solid red;
-            margin-inline: auto;
-        }
+    &__item {
+        outline: 2px solid red;
     }
 }

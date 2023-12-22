@@ -1,49 +1,168 @@
 @use "../abstracts" as ab;
-.border{
-  border-bottom: solid 0.2em rgb(4, 117, 214);
+.border {
+    border-bottom: solid 0.2em rgb(4, 117, 214);
 }
 .nav {
-  display: flex;
-// width: 1em;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2em 0em;
-  
-  .nav_menu {
     display: flex;
+    // width: 1em;
     justify-content: space-between;
     align-items: center;
-    // outline: solid red 2px;
-    gap: 6em;
-    ul {
-      display: flex;
-      gap: 4em;
-// align-items: flex-end;
-    }
-    li {
-      list-style: none;
-      display: flex;
-      a {
-        text-decoration: none;
-        color: black;
-        font-size: 1.125rem;
-        font-weight: 700;
-
-      }
-    }
-    button {
-      background-color: white;
-      border: 0.1em solid #0475d6;
-      border-radius: 0.2em;
-      font-size: 1.25rem;
-      font-weight: 700;
-      width: 12.05788rem;
-      height: 3.64963rem;
-    }
-    button:hover {
-      background-color: #0475d6;
-      color: white;
-      cursor: pointer;
-    }
+    padding: 2em 0em;
+  @include ab.screen-79 {
+    padding: 1.8em 0em;
   }
+  @include ab.screen-74 {
+    padding: 1.6em 0em;
+  }
+  @include ab.screen-69 {
+    padding: 1.4em 0em;
+  }
+  @include ab.screen-64 {
+    padding: 1.1em 0em;
+  }
+  @include ab.screen-59 {
+    padding: 1em 0em;
+    // outline: solid red 2px;
+}
+@include ab.screen-54 {
+  padding: 0.8em 0em;
+  // outline: solid red 2px;
+}
+    > div > img {
+        @include ab.screen-86 {
+            width: 90%;
+        }
+        @include ab.screen-79 {
+            width: 80%;
+        }
+        @include ab.screen-74 {
+            width: 75%;
+        }
+        @include ab.screen-69 {
+            width: 70%;
+        }
+        @include ab.screen-64 {
+            width: 65%;
+        }
+        @include ab.screen-59 {
+          width: 55%;
+          // outline: solid red 2px;
+      }
+      @include ab.screen-54 {
+        width: 50%;
+        // outline: solid red 2px;
+    }
+    }
+    &_menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // outline: solid red 2px;
+        gap: 6em;
+        @include ab.screen-86 {
+            gap: 4em;
+        }
+        @include ab.screen-79 {
+            gap: 4.5em;
+        }
+        @include ab.screen-74 {
+            gap: 2.5em;
+        }
+        @include ab.screen-69 {
+            gap: 2.1em;
+        }
+
+        ul {
+            display: flex;
+            gap: 4em;
+            @include ab.screen-86 {
+                gap: 3em;
+            }
+            @include ab.screen-79 {
+                gap: 2.5em;
+            }
+            @include ab.screen-74 {
+                gap: 1.6em;
+            }
+            @include ab.screen-69 {
+                gap: 1.5em;
+            }
+            // align-items: flex-end;
+        }
+        li {
+            list-style: none;
+            display: flex;
+            a {
+                text-decoration: none;
+                color: black;
+                font-size: 1.125rem;
+                font-weight: 700;
+                @include ab.screen-86 {
+                    font-size: clamp(1rem, 2vw, 1.125rem);
+                }
+                @include ab.screen-79 {
+                    font-size: clamp(1rem, 1.8vw, 1.125rem);
+                }
+                @include ab.screen-69 {
+                    font-size: clamp(1rem, 1.3vw, 1.125rem);
+                }
+                @include ab.screen-64 {
+                    font-size: clamp(0.8rem, 0.7vw, 1.125rem);
+                }
+                @include ab.screen-59 {
+                  font-size: clamp(0.6rem, 0.7vw, 1.125rem);
+                  
+              }
+              @include ab.screen-54 {
+                font-size: clamp(0.5rem, 0.6vw, 1.125rem);
+                
+            }
+            }
+        }
+        button {
+            background-color: white;
+            border: 0.1em solid #0475d6;
+            border-radius: 0.2em;
+            font-size: 1.25rem;
+            font-weight: 700;
+            width: 12.05788rem;
+            height: 3.64963rem;
+            transition: background-color 300ms;
+            @include ab.screen-86 {
+                font-size: clamp(1rem, 2vw, 1.125rem);
+                width: 10.05788rem;
+                height: 3.1rem;
+            }
+            @include ab.screen-79 {
+                font-size: clamp(1rem, 1.7vw, 1.125rem);
+                width: 8.05788rem;
+                height: 2.7rem;
+            }
+            @include ab.screen-69 {
+                font-size: clamp(1rem, 1.3vw, 1.125rem);
+                width: 7.05788rem;
+                height: 2.3rem;
+            }
+            @include ab.screen-64 {
+                font-size: clamp(0.8rem, 0.5vw, 1.125rem);
+                width: 6.9rem;
+                height: 2.1rem;
+            }
+            @include ab.screen-59 {
+              font-size: clamp(0.7rem, 0.5vw, 1.125rem);
+              width: 6.9rem;
+              height: 2.1rem;
+          }
+          @include ab.screen-54 {
+            font-size: clamp(0.6rem, 0.4vw, 1.125rem);
+            width: 6.9rem;
+            height: 2.1rem;
+        }
+        }
+        button:hover {
+            background-color: #0475d6;
+            color: white;
+            cursor: pointer;
+        }
+    }
 }
