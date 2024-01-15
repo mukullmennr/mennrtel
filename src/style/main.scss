@@ -1,7 +1,8 @@
-@use "./abstracts" ;
+@use "./abstracts";
 @use "./components";
-.container{
+
+.container {
     // width: 96px;
-    width: min(90%, 85rem);
-    margin-inline:auto;
+    width: min(90%, 70rem);
+    margin-inline: auto;
 }
