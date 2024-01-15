@@ -6,7 +6,7 @@ const Main = () => {
                 <div className="main">
                     <div className="main_heading">
                         <h1 className="main_heading1">
-                            We're passionate about helping{" "}
+                            We&apos;re passionate about helping
                             <span>business succeed</span> online
                         </h1>
                         <p className="main_heading2">
@@ -45,7 +45,7 @@ const Main = () => {
                             </div>
                         </div>
                         <div className="main-image__text">
-                            <p>Yes, we're certified</p>
+                            <p>Yes, we&apos;re certified</p>
                         </div>
                     </div>
                 </div>
