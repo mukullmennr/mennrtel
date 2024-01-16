@@ -24,10 +24,50 @@
     img {
         display: none;
     }
+    &-image {
+        position: relative;
+        &_line {
+            position: absolute;
+            height: 0.1em;
+            background-color: #0475d6;
+            width: 100%;
+            bottom: 4em;
+            z-index: -2;
+        }
+    }
 }
 .silder {
+    margin-top: 3em;
+    overflow: hidden;
     .slides {
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-250px * 4));
+            }
+        }
+        display: flex;
+        gap: 3em;
+        animation: scroll 9s linear infinite;
+        width: calc(100px * 17);
+        transition: ease-in-out 2s;
+        overflow: hidden;
         .slide {
+            z-index: 1;
+            border: 0.2em solid #0475d6;
+            border-radius: 0.3em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.8em 0em 0.8em 0em;
+            width: clamp(16em, 18vw, 18em);
+            background-color: white;
+            overflow: hidden;
+            img {
+                width: clamp(7em, 9vw, 9em);
+            }
         }
     }
 }

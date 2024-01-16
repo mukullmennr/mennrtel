@@ -20,35 +20,54 @@ const Main = () => {
                 </div>
             </div>
             <div className="main-image">
-                <div className="container">
-                    <div className="silder">
-                        <div className="slides">
-                            <div className="slide_first">
-                                <img
-                                    src="/main/Google_certificate.svg"
-                                    alt="Google_certificate"
-                                />
-                            </div>
-
-                            <div className="slide">
-                                <img
-                                    src="/main/hubspot_certificate.svg"
-                                    alt="hunspot_certificate"
-                                />
-                            </div>
-
-                            <div className="slide">
-                                <img
-                                    src="/main/Yext_certificate.svg"
-                                    alt="Yext_certificate"
-                                />
-                            </div>
+                <div className="silder">
+                    <div className="slides">
+                        <div className="slide">
+                            <img
+                                src="/main/Google_certificate.svg"
+                                alt="Google_certificate"
+                            />
                         </div>
-                        <div className="main-image__text">
-                            <p>Yes, we&apos;re certified</p>
+
+                        <div className="slide">
+                            <img
+                                src="/main/hubspot_certificate.svg"
+                                alt="hunspot_certificate"
+                            />
+                        </div>
+
+                        <div className="slide">
+                            <img
+                                src="/main/Yext_certificate.svg"
+                                alt="Yext_certificate"
+                            />
+                        </div>
+                        <div className="slide">
+                            <img
+                                src="/main/Google_certificate.svg"
+                                alt="Google_certificate"
+                            />
+                        </div>
+
+                        <div className="slide">
+                            <img
+                                src="/main/hubspot_certificate.svg"
+                                alt="hunspot_certificate"
+                            />
+                        </div>
+
+                        <div className="slide">
+                            <img
+                                src="/main/Yext_certificate.svg"
+                                alt="Yext_certificate"
+                            />
                         </div>
                     </div>
+                    <div className="container main-image__text">
+                        <p>Yes, we&apos;re certified</p>
+                    </div>
                 </div>
+                <div className="main-image_line"></div>
             </div>
         </>
     );
