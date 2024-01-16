@@ -42,10 +42,11 @@
     .slides {
         @keyframes scroll {
             0% {
-                transform: translateX(0);
+                translate: 0;
             }
             100% {
-                transform: translateX(calc(-250px * 4));
+                translate: -54.65em;
+                // translate: 100%;
             }
         }
         display: flex;
@@ -53,7 +54,9 @@
         animation: scroll 9s linear infinite;
         width: calc(100px * 17);
         transition: ease-in-out 2s;
-        overflow: hidden;
+
+        // translate: -54.65em;
+
         .slide {
             z-index: 1;
             border: 0.2em solid #0475d6;
@@ -62,9 +65,10 @@
             justify-content: center;
             align-items: center;
             padding: 0.8em 0em 0.8em 0em;
-            width: clamp(16em, 18vw, 18em);
+            // width: clamp(16em, 18vw, 18em);
+            width: 17em;
             background-color: white;
-            overflow: hidden;
+
             img {
                 width: clamp(7em, 9vw, 9em);
             }
