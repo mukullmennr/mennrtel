@@ -26,6 +26,8 @@
     }
     &-image {
         position: relative;
+        z-index: -1;
+
         &_line {
             position: absolute;
             height: 0.1em;
@@ -39,6 +41,9 @@
 .silder {
     margin-top: 3em;
     overflow: hidden;
+    z-index: 1;
+    position: relative;
+
     .slides {
         @keyframes scroll {
             0% {
@@ -58,7 +63,6 @@
         // translate: -54.65em;
 
         .slide {
-            z-index: 1;
             border: 0.2em solid #0475d6;
             border-radius: 0.3em;
             display: flex;
@@ -73,5 +77,23 @@
                 width: clamp(7em, 9vw, 9em);
             }
         }
+    }
+}
+.heading {
+    // outline: 2px solid red;
+    h3 {
+        // outline: 2px solid blue;
+        text-align: center;
+        color: #333333;
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    .offer {
+        // outline: 5px solid green;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 2em;
     }
 }

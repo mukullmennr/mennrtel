@@ -1,9 +1,10 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { inter } from "@/fonts/fonts";
 
 export default function Nav() {
+    const [navOpen, setNavOpen] = useState(false);
     // const nav = document.querySelector(".border") ;
     // let lastScrollY = window.scrollY;
     // window.addEventListener("scroll", () => {
@@ -18,13 +19,15 @@ export default function Nav() {
     return (
         <div className={`${inter.className} border`}>
             <div className="container">
-                <div className="nav">
+                <div className="nav ">
                     <div className="nav_icon">
                         <div>
                             <input
                                 type="checkbox"
                                 id="Toggle"
                                 // onClick={handleCheckboxClick}
+                                checked={navOpen}
+                                onChange={() => setNavOpen((prev) => !prev)}
                             />
                             <label htmlFor="Toggle">
                                 <div className="Menu-container">
@@ -38,7 +41,7 @@ export default function Nav() {
                             </Link>
                         </div>
                     </div>
-                    <div className="nav_menu">
+                    <div className={`nav_menu ${navOpen ? "open" : ""}`}>
                         <ul id="menu">
                             <li>
                                 <Link href="/">Who We Are</Link>
@@ -53,9 +56,9 @@ export default function Nav() {
                                 <Link href="/">Solutions</Link>
                             </li>
                         </ul>
-                        <div>
-                            <button>Get free email quote</button>
-                        </div>
+                    </div>
+                    <div>
+                        <button>Get free email quote</button>
                     </div>
                 </div>
             </div>

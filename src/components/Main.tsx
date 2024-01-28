@@ -1,4 +1,9 @@
 import React from "react";
+import Offer from "@/components/Offer";
+import { offers } from "@/data/components/offer.js";
+import { sol } from "@/data/components/sol_list.js";
+import Empower_card from "@/components/Empower_card";
+import Sol_list from "@/components/Sol_list";
 const Main = () => {
     return (
         <>
@@ -68,6 +73,18 @@ const Main = () => {
                     </div>
                 </div>
                 <div className="main-image_line"></div>
+            </div>
+            <div className={`heading container`}>
+                <h3>Our Offerings</h3>
+                <div className="offer">
+                    {offers.map((offer) => (
+                        <Offer key={offer.id} data={offer} />
+                    ))}
+                </div>
+            </div>
+            <Empower_card />
+            <div className={`container sol_list`}>
+                <Sol_list ques={sol.data}>{sol.heading}</Sol_list>
             </div>
         </>
     );
