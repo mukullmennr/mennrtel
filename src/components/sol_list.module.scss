@@ -10,7 +10,7 @@
         padding-block: clamp(2.26rem, 2vw, 3.96rem);
 
         .accordion_root {
-            // outline: 2px solid red;
+            outline: 2px solid red;
             // max-width: 30em;
             display: grid;
             gap: clamp(1.41rem, 2vw, 2.06rem);
@@ -19,7 +19,7 @@
             justify-content: space-around;
 
             .accordion_item {
-                // outline: 2px solid red;
+                outline: 2px solid lightgreen;
                 width: clamp(24em, 30vw, 30em);
                 border-bottom: 0.0625rem solid #0475d6;
                 border-left: 0.0625rem solid #0475d6;

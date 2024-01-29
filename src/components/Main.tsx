@@ -4,6 +4,7 @@ import { offers } from "@/data/components/offer.js";
 import { sol } from "@/data/components/sol_list.js";
 import Empower_card from "@/components/Empower_card";
 import Sol_list from "@/components/Sol_list";
+import Form from "@/components/Form";
 const Main = () => {
     return (
         <>
@@ -86,6 +87,7 @@ const Main = () => {
             <div className={`container sol_list`}>
                 <Sol_list ques={sol.data}>{sol.heading}</Sol_list>
             </div>
+            <Form />
         </>
     );
 };
