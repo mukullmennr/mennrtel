@@ -1,3 +1,4 @@
+@use "/src/style/abstracts" as ab;
 .empower {
     background-image: url("../../public/main/empower_moblie.svg");
     background-repeat: no-repeat;
@@ -10,6 +11,9 @@
     padding: 1.8em 0.7em;
     align-items: center;
     margin: 2em 0em;
+    @include ab.screen-40 {
+        flex-direction: row;
+    }
     p {
         font-weight: 700;
         font-size: clamp(1.8rem, 3vw, 3rem);
@@ -23,7 +27,8 @@
         font-weight: 600;
         padding: 0.5em 0.4em;
         border-radius: 0.2em;
-        width: clamp(10em, 11vw, 11em);
+        width: clamp(13em, 14vw, 14em);
         text-align: center;
+        max-height: 5em;
     }
 }

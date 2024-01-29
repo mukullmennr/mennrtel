@@ -5,6 +5,7 @@ import { sol } from "@/data/components/sol_list.js";
 import Empower_card from "@/components/Empower_card";
 import Sol_list from "@/components/Sol_list";
 import Form from "@/components/Form";
+import Footer from "@/components/Footer";
 const Main = () => {
     return (
         <>
@@ -88,6 +89,7 @@ const Main = () => {
                 <Sol_list ques={sol.data}>{sol.heading}</Sol_list>
             </div>
             <Form />
+            <Footer />
         </>
     );
 };

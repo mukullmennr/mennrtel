@@ -36,7 +36,7 @@ export default function Nav() {
                             </label>
                         </div>
                         <div className="nav_img">
-                            <Link href="/">
+                            <Link href="/" prefetch={false}>
                                 <img src="/icon.svg" alt="mennrtel" />
                             </Link>
                         </div>

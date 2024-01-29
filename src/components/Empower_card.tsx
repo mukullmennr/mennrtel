@@ -6,7 +6,9 @@ export default function Empower_card() {
         <div className="container">
             <div className={styles.empower}>
                 <p>Empower Your Business Journey with Digital Excellence </p>
-                <Link href="/">Let’s Get Started!</Link>
+                <Link href="/" prefetch={false}>
+                    Let’s Get Started!
+                </Link>
             </div>
         </div>
     );
