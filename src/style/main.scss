@@ -1,10 +1,11 @@
 @use "./abstracts";
+@use "./abstracts/reset";
 @use "./components";
 
 .container {
-    // width: 96px;
-    width: min(90%, 74rem);
-    margin-inline: auto;
+	// width: 96px;
+	width: min(90%, 74rem);
+	margin-inline: auto;
 }
 // body {
 //     position: relative;

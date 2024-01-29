@@ -1,132 +1,145 @@
+@use "/src/style/abstracts" as ab;
+
 .faq {
-    .faq_heading {
-        font-size: clamp(1.5rem, 2vw, 2.5rem);
-        text-align: center;
-    }
+	.faq_heading {
+		font-size: clamp(1.5rem, 2vw, 2.5rem);
+		text-align: center;
+	}
 
-    .faq_accordion {
-        // outline: 2px solid red;
-        // padding-inline: clamp(1.36rem, 3vw, 5.23rem);
-        padding-block: clamp(2.26rem, 2vw, 3.96rem);
+	.faq_accordion {
+		// outline: 2px solid red;
+		// padding-inline: clamp(1.36rem, 3vw, 5.23rem);
+		padding-block: clamp(2.26rem, 2vw, 3.96rem);
 
-        .accordion_root {
-            outline: 2px solid red;
-            // max-width: 30em;
-            display: grid;
-            gap: clamp(1.41rem, 2vw, 2.06rem);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+		.accordion_root {
+			// outline: 2px solid red;
+			// max-width: 30em;
+			gap: clamp(1.41rem, 2vw, 2.06rem);
 
-            .accordion_item {
-                outline: 2px solid lightgreen;
-                width: clamp(24em, 30vw, 30em);
-                border-bottom: 0.0625rem solid #0475d6;
-                border-left: 0.0625rem solid #0475d6;
-                padding-block: 0.5em;
-                padding-inline: 0.81rem;
+			display: grid;
+			// flex-wrap: wrap;
+			// justify-content: space-between;
 
-                .accordion_header {
-                    // outline: 2px solid red;
-                    padding-top: 0.2em;
-                    .accordion_trigger {
-                        // outline: 2px solid red;
-                        font-weight: 500;
-                        text-align: left;
-                        font-size: 1.8rem;
-                        padding: 0;
+			@include ab.screen-48 {
+				grid-template-columns: repeat(2, 1fr);
+			}
 
-                        width: 100%;
-                        // color: ab.$text1;
-                        background-color: transparent;
-                        border: none;
+			> div {
+				display: grid;
+				gap: clamp(1.41rem, 2vw, 2.06rem);
+				align-content: start;
+			}
 
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin-block-end: 0.6rem;
-                        gap: 1em;
-                        > div {
-                            display: flex;
-                            align-items: center;
-                            justify-content: flex-start;
-                            // background-color: black;
-                            width: 1.2rem;
-                            height: 1.2rem;
-                            aspect-ratio: 1/ 1;
-                            border-radius: 50%;
+			.accordion_item {
+				// outline: 2px solid lightgreen;
+				// width: clamp(24em, 30vw, 35em);
+				border-bottom: 0.0625rem solid #0475d6;
+				border-left: 0.0625rem solid #0475d6;
+				padding-block: 0.5em;
+				padding-inline: 0.81rem;
 
-                            position: relative;
+				.accordion_header {
+					// outline: 2px solid red;
+					padding-top: 0.2em;
+					.accordion_trigger {
+						// outline: 2px solid red;
+						font-weight: 500;
+						text-align: left;
+						font-size: 1.8rem;
+						padding: 0;
+						// font-size: 1.2rem;
 
-                            span {
-                                display: inline-block;
-                                width: 0.6rem;
-                                height: 0.1rem;
-                                background-color: black;
+						width: 100%;
+						// color: ab.$text1;
+						background-color: transparent;
+						border: none;
 
-                                position: absolute;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						margin-block-end: 0.6rem;
+						gap: 1em;
+						> div {
+							display: flex;
+							align-items: center;
+							justify-content: flex-start;
+							// background-color: black;
+							width: 1.2rem;
+							height: 1.2rem;
+							aspect-ratio: 1/ 1;
+							border-radius: 50%;
 
-                                transition: rotate 300ms;
-                                left: 50%;
-                                translate: -50%;
+							position: relative;
 
-                                &:last-child {
-                                    rotate: 90deg;
-                                }
-                            }
-                        }
-                    }
-                    .accordion_trigger[data-state="open"] {
-                        // outline: 2px solid red;
-                        div {
-                            // outline: 2px solid red;
-                            span:last-child {
-                                rotate: 0deg;
-                            }
-                        }
-                    }
-                }
+							span {
+								display: inline-block;
+								width: 0.6rem;
+								height: 0.1rem;
+								background-color: black;
 
-                .accordion_content {
-                    outline: 2px solid red;
-                    --duration: 200ms;
-                    --animation-function: cubic-bezier(0.87, 0, 0.13, 1);
-                    --max-height: 500px;
+								position: absolute;
 
-                    overflow: hidden;
+								transition: rotate 300ms;
+								left: 50%;
+								translate: -50%;
 
-                    &[data-state="open"] {
-                        animation: open var(--duration)
-                            var(--animation-function);
-                    }
-                    &[data-state="closed"] {
-                        animation: close var(--duration)
-                            var(--animation-function);
-                    }
-                }
-            }
-        }
-    }
+								&:last-child {
+									rotate: 90deg;
+								}
+							}
+						}
+					}
+					.accordion_trigger[data-state="open"] {
+						// outline: 2px solid red;
+						div {
+							// outline: 2px solid red;
+							span:last-child {
+								rotate: 0deg;
+							}
+						}
+					}
+				}
+
+				.accordion_content {
+					// outline: 2px solid red;
+					--duration: 200ms;
+					--animation-function: cubic-bezier(0.87, 0, 0.13, 1);
+					--max-height: 500px;
+
+					overflow: hidden;
+
+					&[data-state="open"] {
+						animation: open var(--duration)
+							var(--animation-function);
+					}
+					&[data-state="closed"] {
+						animation: close var(--duration)
+							var(--animation-function);
+					}
+				}
+			}
+		}
+	}
 }
 
 @keyframes open {
-    from {
-        // height: 0;
-        max-height: 0;
-    }
-    to {
-        // height: var(--radix-accordion-content-height);
-        max-height: var(--max-height);
-    }
+	from {
+		// height: 0;
+		max-height: 0;
+	}
+	to {
+		// height: var(--radix-accordion-content-height);
+		max-height: var(--max-height);
+	}
 }
 
 @keyframes close {
-    from {
-        // height: var(--radix-accordion-content-height);
-        max-height: var(--max-height);
-    }
-    to {
-        // height: 0;
-        max-height: 0;
-    }
+	from {
+		// height: var(--radix-accordion-content-height);
+		max-height: var(--max-height);
+	}
+	to {
+		// height: 0;
+		max-height: 0;
+	}
 }
