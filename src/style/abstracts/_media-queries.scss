@@ -4,7 +4,11 @@
         @content;
     }
 }
-
+@mixin screen-900 {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
 // md 768
 @mixin screen-48 {
     @media (min-width: 48em) {
@@ -39,7 +43,12 @@
         @content;
     }
 }
-
+//870
+@mixin screen-55 {
+    @media (min-width: 54.3em) {
+        @content;
+    }
+}
 // 1189
 @mixin screen-74 {
     @media (min-width: 74.3em) {

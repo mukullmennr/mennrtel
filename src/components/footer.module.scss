@@ -1,42 +1,94 @@
+@use "/src/style/abstracts" as ab;
+.bg {
+    background-image: url("../../public/main/footer_mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include ab.screen-40 {
+        background-image: url("../../public/main/footer_pc.svg");
+    }
+}
 .footer {
+    color: white;
     padding: 2em 0em;
-    display: flex;
-    flex-wrap: wrap;
-    outline: 2px solid red;
-    // align-items: center;
-    justify-content: space-evenly;
-    gap: 2em;
-    // width: 100%;
-    &1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    gap: 1em;
+    // justify-items: center;
+
+    @include ab.screen-48 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    // > * {
+    //     outline: 2px solid red;
+    // }
+
+    iframe {
+        width: 100%;
+    }
+
+    .links {
         display: flex;
-        justify-content: space-evenly;
-        gap: 0.2em;
-        width: clamp(19em, 35vw, 35em);
-        outline: 2px solid red;
-        iframe {
-            width: clamp(10em, 13vw, 13em);
-            height: clamp(10em, 13vw, 13em);
+        flex-direction: column;
+        gap: 0.8em;
+        > p {
+            font-weight: 700;
+            font-size: 1.25rem;
         }
-        .address {
-            width: clamp(8em, 10vw, 10em);
-            // outline: 2px solid red;
-            .details {
-                display: none;
+        > div {
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+            a {
+                text-decoration: none;
+                color: white;
             }
         }
     }
-    &2 {
+    .address {
         display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-evenly;
-        gap: 0.9em;
-        width: clamp(19em, 35vw, 35em);
-        outline: 2px solid red;
-        .links {
+        flex-direction: column;
+        gap: 0.8em;
+        > p {
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        > div {
+            font-weight: 400;
             display: flex;
             flex-direction: column;
-            width: clamp(8em, 10vw, 10em);
-            // outline: 2px solid red;
+            gap: 0.5em;
+            font-size: 1rem;
+            .details {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em;
+            }
         }
     }
+    .connect {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8em;
+        > p {
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        > div {
+            font-weight: 400;
+            font-size: 1rem;
+        }
+    }
+}
+.footer2 {
+    // outline: 2px solid red;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 0.875rem;
+    padding-bottom: 1.5em;
+    color: white;
 }

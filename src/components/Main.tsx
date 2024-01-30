@@ -28,7 +28,7 @@ const Main = () => {
             </div>
             <div className="main-image">
                 <div className="silder">
-                    <div className="slides">
+                    <div className="container slides">
                         <div className="slide">
                             <img
                                 src="/main/Google_certificate.svg"
@@ -63,6 +63,25 @@ const Main = () => {
                             />
                         </div>
 
+                        <div className="slide">
+                            <img
+                                src="/main/Yext_certificate.svg"
+                                alt="Yext_certificate"
+                            />
+                        </div>
+                        <div className="slide">
+                            <img
+                                src="/main/Google_certificate.svg"
+                                alt="Google_certificate"
+                            />
+                        </div>
+
+                        <div className="slide">
+                            <img
+                                src="/main/hubspot_certificate.svg"
+                                alt="hunspot_certificate"
+                            />
+                        </div>
                         <div className="slide">
                             <img
                                 src="/main/Yext_certificate.svg"
