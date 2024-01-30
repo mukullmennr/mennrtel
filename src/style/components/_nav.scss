@@ -123,7 +123,7 @@
             // align-items: center;
         }
         @include ab.screen-64 {
-            gap: clamp(1em, 5vw, 5em);
+            gap: clamp(1em, 4vw, 4em);
         }
         li {
             // outline: 2px solid red;
@@ -136,7 +136,7 @@
                 font-weight: 700;
                 font-size: 1.5rem;
                 @include ab.screen-48 {
-                    font-size: clamp(0.8rem, 1vw, 1.2rem);
+                    font-size: clamp(0.8rem, 1vw, 1.1rem);
                 }
                 &:hover {
                     text-decoration: underline;
