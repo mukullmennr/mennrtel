@@ -1,6 +1,6 @@
 @use "/src/style/abstracts" as ab;
 .empower {
-    background-image: url("../../public/main/empower_moblie.svg");
+    background-image: linear-gradient(165deg, #10558f, #0c75ce, #0a5da5);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -8,11 +8,12 @@
     flex-direction: column;
     gap: 1.5em;
     border-radius: 0.8em;
-    padding: 1.8em 0.7em;
+    padding: 1.8em 1.5em;
     align-items: center;
     margin: 2em 0em;
     @include ab.screen-55 {
-        background-image: url("../../public/main/empower_desk.svg");
+        // background-image: url("../../public/main/empower_desk.svg");
+        background-image: linear-gradient(90deg, #10558f, #0c75ce, #0a5da5);
         flex-direction: row;
         gap: 0em;
         justify-content: space-between;
@@ -26,7 +27,7 @@
     a {
         background-color: #e3374e;
         color: white;
-        font-size: clamp(1.1rem, 2vw, 1.5rem);
+        font-size: clamp(1.1rem, 1vw, 1.5rem);
         text-decoration: none;
         font-weight: 600;
         padding: 0.5em 0.4em;

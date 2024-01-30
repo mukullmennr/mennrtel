@@ -1,11 +1,12 @@
 @use "/src/style/abstracts" as ab;
 .card {
-    background-image: url("../../public/main/formphone.svg");
+    // background-image: url("../../public/main/formphone.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: linear-gradient(165deg, #2e452c, #4208a7, #111063);
     padding: 2em 0em;
     @include ab.screen-40 {
-        background-image: url("../../public/main/formdesktop.svg");
+        background-image: linear-gradient(90deg, #2e452c, #4208a7, #111063);
     }
     .container {
         @include ab.screen-54 {
