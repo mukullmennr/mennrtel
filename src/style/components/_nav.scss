@@ -137,6 +137,7 @@
                 font-size: 1.5rem;
                 @include ab.screen-48 {
                     font-size: clamp(0.8rem, 1vw, 1.1rem);
+                    color: black;
                 }
                 &:hover {
                     text-decoration: underline;
